@@ -3,5 +3,7 @@
 Another module inside the `lectures` package
 """
 
-# OLD: import mod_inside_lec
+import sys
+sys.path.append(r'D:\FINS3646\toolkit\z5265278_lectures')
+
 from lectures import mod_inside_lec
