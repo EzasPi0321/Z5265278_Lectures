@@ -63,7 +63,7 @@ bday_ser = pd.Series(data=bday, index=dates)
 #   Create a dataframe
 # ----------------------------------------------------------------------------
 # Data Frame with close and Bday columns
-df  = pd.DataFrame({'Close': prc_ser, 'Bday': bday_ser})
+df = pd.DataFrame({'Close': prc_ser, 'Bday': bday_ser})
 print(df)
 
 
@@ -123,8 +123,9 @@ print(new_ser)
 print(new_ser.is_monotonic_increasing)
 
 # Sort the series based on the index
-sorted_ser  = new_ser.sort_index()
+sorted_ser = new_ser.sort_index()
 print(sorted_ser)
+
 
 # This will return only the first rows (not the entire series as before)
 x = sorted_ser['a':'b'] # --> only first two rows
@@ -144,7 +145,7 @@ print(x)
 # dtype: int64
 
 # Create a series with an unsorted index
-ser_sort_inplace  = pd.Series(data=[1,3,2], index=['a', 'c', 'b'])
+ser_sort_inplace = pd.Series(data=[1,3,2], index=['a', 'c', 'b'])
 
 # Sort the series. Note that we are not assigning this function call
 # to a new variable.

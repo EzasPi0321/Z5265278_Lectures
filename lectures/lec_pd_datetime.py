@@ -61,7 +61,6 @@ a_little_ago = dt.datetime(
     minute=27,
     second=1, microsecond=283311)
 print(a_little_ago)
-#
 
 
 # Note that we don't have to pass all arguments
@@ -90,12 +89,11 @@ delta = dt1 - dt0
 print(repr(delta))
 print(delta)
 
-
-# These two dates are 12 hours apart
 t1 = dt.datetime(year=2020, month=12, day=31, hour=12)
 t2 = dt.datetime(year=2020, month=12, day=31, hour=0)
 
 new_delta = t1 - t2
+
 print(new_delta)
 
 
@@ -183,9 +181,6 @@ print(didx)
 
 # Convert the elements in the Date column
 prc.loc[:, 'Date'] = pd.to_datetime(prc['Date'], format='%Y-%m-%d')
-prc.info()
-
-prc.set_index('Date') # this will not change the original df as it returns a new dataframe; need to assign it
 prc.info()
 
 # ----------------------------------------------------------------------------
